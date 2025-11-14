@@ -3,6 +3,7 @@
 import datetime
 from functools import lru_cache
 import importlib.resources
+from importlib.resources.abc import Traversable
 
 # circa Mar 2024, I cannot find any type stubs for strictyaml.
 # so ignore type issues
@@ -32,9 +33,7 @@ def _load_tickers_from_yaml(year: int = 2020) -> dict:
 
     module_name = "nasdaq_100_ticker_history"
     resource_name = f"n100-ticker-changes-{year}.yaml"
-    resource: importlib.resources.abc.Traversable = importlib.resources.files(module_name).joinpath(
-        resource_name
-    )
+    resource: Traversable = importlib.resources.files(module_name).joinpath(resource_name)
 
     if not resource.is_file():
         raise NotImplementedError(
@@ -56,7 +55,7 @@ def tickers_as_of(year: int = 2020, month: int = 1, day: int = 1) -> frozenset:
     :return: a frozenset of ``str`` of symbol names in the index as of year, month, day.
     :rtype: frozenset
 
-    >>> 'TSLA' in tickers_as_of(2020, 9, 1)
+    >>> "TSLA" in tickers_as_of(2020, 9, 1)
     True
     >>> len(tickers_as_of(2020, 9, 1)) == 103
     True
@@ -64,7 +63,8 @@ def tickers_as_of(year: int = 2020, month: int = 1, day: int = 1) -> frozenset:
 
     tickers = _load_tickers_from_yaml(year=year)
     result = set(tickers["tickers_on_Jan_1"])
-    if "changes" in tickers:  # changes happen sometime later in the year.
+    if "changes" in tickers:  # pragma: no branch.  Needed as every year has changes.
+        # changes happen sometime later in the year.
         query_date = datetime.date(year=year, month=month, day=day)
         for d in list(map(datetime.date.fromisoformat, sorted(list(tickers["changes"].keys())))):
             if d <= query_date:
@@ -76,7 +76,7 @@ def tickers_as_of(year: int = 2020, month: int = 1, day: int = 1) -> frozenset:
                             rhs_code = "result.union(rhs)"
                         case "difference":
                             rhs_code = "result.difference(rhs)"
-                        case _:
+                        case _:  # pragma: no cover
                             raise NotImplementedError(f"unknown set operation: {k} in changes {d}")
                     r = eval(rhs_code)
                     result = r

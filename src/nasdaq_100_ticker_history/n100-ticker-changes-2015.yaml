@@ -1,5 +1,5 @@
 ---
-year: 2016
+year: 2015
 tickers_on_Jan_1:
   - AAL
   - AAPL
@@ -8,6 +8,7 @@ tickers_on_Jan_1:
   - ADP
   - ADSK
   - AKAM
+  - ALTR
   - ALXN
   - AMAT
   - AMGN
@@ -18,43 +19,46 @@ tickers_on_Jan_1:
   - BIDU
   - BIIB
   - BKNG
-  - BMRN
+  - BRCM
   - CA
   - CELG
   - CERN
   - CHKP
+  - CHRW
   - CHTR
   - CMCSA
   - COST
   - CSCO
   - CTSH
   - CTXS
+  - CTRX
   - DISCA
   - DISCK
   - DISH
   - DLTR
+  - DTV
   - EA
   - EBAY
-  - ENDP
+  - EQIX
   - ESRX
-  - EXPE
+  - EXPD
   - FAST
   - FB
   - FISV
   - FOX
   - FOXA
   - GILD
+  - GMCR
   - GOOG
   - GOOGL
+  - GRMN
   - HSIC
   - ILMN
-  - INCY
   - INTC
   - INTU
   - ISRG
-  - JD
-  - KHC
   - KLAC
+  - KRFT
   - LBTYA
   - LBTYK
   - LLTC
@@ -67,98 +71,108 @@ tickers_on_Jan_1:
   - MNST
   - MSFT
   - MU
-  - MXIM
   - MYL
-  - NCLH
+  - NTAP
   - NFLX
   - NLOK
-  - NTAP
-  - NXPI
   - NVDA
+  - NXPI
   - ORLY
   - PAYX
   - PCAR
-  - PYPL
   - QCOM
   - QRTEA
   - REGN
   - ROST
   - SBAC
   - SBUX
+  - SIAL
   - SIRI
   - SNDK
+  - SPLS
   - SRCL
   - STX
-  - SWKS
-  - TCOM
-  - TMUS
   - TRIP
   - TSCO
   - TSLA
   - TXN
-  - ULTA
   - VIAB
+  - VIP
   - VOD
   - VRSK
   - VRTX
-  - WBA
   - WDC
   - WFM
+  - WYNN
   - XLNX
   - YHOO
 
 changes:
   # the main source of these changes is the wikipedia page:
-  #  https://en.wikipedia.org/wiki/NASDAQ-100#Changes_in_2016
+  #  https://en.wikipedia.org/wiki/Nasdaq-100#Regular_changes
 
-  '2016-02-22':
+  '2015-03-23':
     difference:
-      - KLAC
+      - EQIX
     union:
-      - CSX
+      - WBA
 
-  '2016-03-16':
+  '2015-07-02':
     difference:
-      - SNDK
+      - KRFT
     union:
-      - NTES
+      - KHC
+      - LILA
+      - LILAK
 
-  '2016-04-18':
-    union:
-      - BATRA
-      - BATRK
-
-  '2016-06-10':
+  '2015-07-27':
     difference:
-      - LMCA
-      - LMCK
-      - BATRA
-      - BATRK
+      - DTV
     union:
-      - XRAY
+      - BMRN
 
-  '2016-07-18':
+  '2015-07-29':
     difference:
+      - CTRX
+    union:
+      - JD
+
+  '2015-08-03':
+    difference:
+      - SIAL
+    union:
+      - SWKS
+
+  '2015-10-07':
+    difference:
+      - ALTR
+    union:
+      - INCY
+
+  '2015-11-11':
+    difference:
+      - BRCM
+    union:
+      - PYPL
+
+  # annual changes for 2015
+  #  https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-4
+  '2015-12-21':
+    difference:
+      - CHRW
+      - EXPD
+      - GMCR
+      - GRMN
+      - SPLS
+      - VIP
+      - WYNN
+      - LILA
+      - LILAK
+    union:
+      - CTRP
       - ENDP
-    union:
-      - MCHP
-
-  '2016-10-19':
-    difference:
-      - LLTC
-    union:
-      - SHPG
-
-  # annual changes for 2016
-  #  https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-5
-  '2016-12-19':
-    difference:
-      - BBBY
-      - NTAP
-      - SRCL
-      - WFM
-    union:
-      - CTAS
-      - HAS
-      - HOLX
-      - KLAC
+      - EXPE
+      - MXIM
+      - NCLH
+      - TMUS
+      - ULTA

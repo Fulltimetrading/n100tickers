@@ -1,129 +1,117 @@
 ---
-year: 2019
+year: 2025
 tickers_on_Jan_1:
-  - AAL
   - AAPL
+  - ABNB
   - ADBE
   - ADI
   - ADP
   - ADSK
-  - ALGN
-  - ALXN
+  - AEP
   - AMAT
   - AMD
   - AMGN
   - AMZN
+  - ANSS
+  - APP
+  - ARM
   - ASML
-  - ATVI
   - AVGO
-  - BIDU
+  - AXON
+  - AZN
   - BIIB
   - BKNG
-  - BMRN
+  - BKR
+  - CCEP
   - CDNS
-  - CELG
-  - CERN
-  - CHKP
+  - CDW
+  - CEG
   - CHTR
   - CMCSA
   - COST
+  - CPRT
+  - CRWD
   - CSCO
+  - CSGP
   - CSX
   - CTAS
   - CTSH
-  - CTXS
-  - DLTR
+  - DASH
+  - DDOG
+  - DXCM
   - EA
-  - EBAY
-  - EXPE
+  - EXC
+  - FANG
   - FAST
-  - FB
-  - FISV
-  - FOX
-  - FOXA
+  - FTNT
+  - GFS
+  - GEHC
   - GILD
   - GOOG
   - GOOGL
-  - HAS
-  - HSIC
+  - HON
   - IDXX
-  - ILMN
-  - INCY
   - INTC
   - INTU
   - ISRG
-  - JBHT
-  - JD
+  - KDP
   - KHC
   - KLAC
-  - LBTYA
-  - LBTYK
+  - LIN
   - LRCX
   - LULU
   - MAR
   - MCHP
   - MDLZ
   - MELI
+  - META
+  - MDB
   - MNST
+  - MRVL
   - MSFT
+  - MSTR
   - MU
-  - MXIM
-  - MYL
   - NFLX
-  - NLOK
-  - NTAP
-  - NTES
   - NVDA
   - NXPI
+  - ODFL
+  - ON
   - ORLY
+  - PANW
   - PAYX
   - PCAR
+  - PDD
   - PEP
+  - PLTR
   - PYPL
   - QCOM
   - REGN
+  - ROP
   - ROST
   - SBUX
-  - SIRI
   - SNPS
-  - SWKS
-  - TCOM
+  - TEAM
   - TMUS
   - TSLA
+  - TTD
   - TTWO
   - TXN
-  - UAL
-  - ULTA
   - VRSK
-  - VRSN
   - VRTX
-  - WBA
+  - WBD
   - WDAY
-  - WDC
-  - WLTW
-  - WYNN
   - XEL
-  - XLNX
+  - ZS
 
 changes:
-  '2019-11-19':
+  '2025-05-19':
     difference:
-      - CELG
+      - MDB
     union:
-      - EXC
+      - SHOP
 
-  '2019-12-23':
+  '2025-07-28':
     difference:
-      - HAS
-      - HSIC
-      - JBHT
-      - MYL
-      - NLOK
-      - WYNN
-    union:
       - ANSS
-      - CDW
-      - CPRT
-      - CSGP
-      - SGEN
-      - SPLK
+    union:
+      - TRI
